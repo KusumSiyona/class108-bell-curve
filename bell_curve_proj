@@ -1,0 +1,8 @@
+import pandas as pd
+import csv
+import plotly.figure_factory as ff
+
+df = pd.read_csv("proj_data.csv")
+
+fig = ff.create_distplot([df["Avg Rating"].to_list()],["Mobile Brand"], show_hist = False)
+fig.show()
